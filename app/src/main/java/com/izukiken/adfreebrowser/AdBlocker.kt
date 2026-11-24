@@ -9,11 +9,11 @@ import java.util.Locale
 object AdBlocker {
     private val blockedHosts = setOf(
         "doubleclick.net", "googlesyndication.com", "googleadservices.com",
-        "adnxs.com", " 광고.invalid", "adservice.google.com", "ads.yahoo.com",
-        "taboola.com", "outbrain.com", "criteo.com", " pubmatic.com",
-        "adsrvr.org", "scorecardresearch.com", "tracking.rtb.com",
-        "amazon-adsystem.com", "unityads.unity3d.com", "applovin.com"
-    ).map { it.trim() }.filter { it.isNotEmpty() }.toSet()
+        "adnxs.com", "adservice.google.com", "ads.yahoo.com", "taboola.com",
+        "outbrain.com", "criteo.com", "pubmatic.com", "adsrvr.org",
+        "scorecardresearch.com", "amazon-adsystem.com", "applovin.com",
+        "unityads.unity3d.com"
+    )
 
     fun shouldBlock(request: WebResourceRequest): Boolean {
         val host = request.url.host?.lowercase(Locale.ROOT) ?: return false
