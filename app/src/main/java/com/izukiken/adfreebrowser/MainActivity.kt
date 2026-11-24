@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             gravity = Gravity.CENTER_VERTICAL
         }
         address = EditText(this).apply {
-            singleLine = true
+            isSingleLine = true
             textSize = 14f
             hint = "Search or enter website"
             setHintTextColor(Color.LTGRAY)
